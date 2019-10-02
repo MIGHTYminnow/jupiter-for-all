@@ -1,0 +1,92 @@
+/**
+ * Theme Name: Jupiter Child for All
+ * Description: An accessible Jupiter child theme by MIGHTYminnow.
+ * Author: MIGHTYminnow
+ * Author URI: https://mightyminnow.com/
+ * Template: jupiter
+ * Version: 1.0.0
+ * Text Domain: mk_framework
+ * Domain Path: /languages/
+ */
+
+/**
+ * Screen Reader Text
+ * 
+ * Text meant only for screen readers.
+ */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/**
+ * Screen Reader Shortcuts
+ */
+.screen-reader-shortcut{
+    z-index: -999999;
+    overflow: hidden;
+    position:absolute;
+    top: auto;
+    left: -999px;
+    width: 1px;
+    height: 1px;
+}
+.screen-reader-shortcut:focus,
+.screen-reader-shortcut:active{
+	z-index: 999999;
+	top: 10px;
+	left: 10px;
+	padding: 10px 15px;
+	width: auto;
+	height: auto;
+	font-weight: 700;
+	color: #FFF;
+	background: #193ACC;
+	border: 2px solid #FFF;
+}
+
+/**
+ * Set Focus Outline Styles
+ */
+*:focus, /** ... Apply to all elements */
+a.button:focus, /** ... And also overwrite Jupiter styles */
+button.button:focus,
+input.button:focus {
+	outline: 6px auto #193ACC !important;
+}
+
+/**
+ * Uppercase text.
+ *
+ * Use this class to display a text in uppercase,
+ * but writing the text in normal case. Screen readers
+ * consider that uppercase text is an accronnym, so
+ * we shouldn't user uppercase for other texts.
+ */
+.uppercase{
+	text-transform: uppercase;
+}
