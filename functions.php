@@ -17,23 +17,6 @@ if ( ! function_exists( 'jc_enqueue_assets' ) ) {
 }
 
 /**
- * Add role="group" and aria-label to checkbox fields.
- */
-if ( ! function_exists( 'theme_group_same_name_checkboxes' ) ) {
-	add_filter( 'gform_field_content', 'theme_group_same_name_checkboxes', 10, 5 );
-	function theme_group_same_name_checkboxes( $content, $field, $value, $lead_id, $form_id ) {
-		if ( 'checkbox' == $field->type ) {
-			$content = str_replace(
-				"ginput_container_checkbox'",
-				"ginput_container_checkbox' role='group' aria-label='" . esc_attr( $field->label ) . "'",
-				$content
-			);
-		}
-		return $content;
-	}
-}
-
-/**
  * Implement "Skip to" links.
  */
 if ( ! function_exists( 'jc_skip_to_links' ) ) {
