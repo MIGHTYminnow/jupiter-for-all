@@ -90,3 +90,19 @@ input.button:focus {
 .uppercase{
 	text-transform: uppercase;
 }
+
+/**
+ * Nav Side Search Button
+ */
+.nav-side-search-icon button{
+	background: none;
+	border: none;
+}
+
+/**
+ * Responsive Menu Search Button
+ */
+.responsive-searchform button{
+	background: none;
+	border: none;
+}

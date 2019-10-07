@@ -22,7 +22,12 @@ if ($mk_options['header_search_location'] == 'beside_nav') { ?>
 		<form method="get" id="mk-header-navside-searchform" action="<?php echo home_url('/'); ?>">
 			<input type="text" name="s" id="mk-ajax-search-input" autocomplete="off" />
 			<?php wp_nonce_field('mk-ajax-search-form', 'security'); ?>
-			<i class="nav-side-search-icon"><input type="submit" value=""/><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true,'mk-moon-search-3',16); ?></i>
+			<i class="nav-side-search-icon">
+				<button type="submit">
+					<?php Mk_SVG_Icons::get_svg_icon_by_class_name(true,'mk-moon-search-3',16); ?>
+					<span class="screen-reader-text"><?php _e( 'Search', 'mk_framework-child4a' ); ?></span>
+				</button>
+			</i>
 		</form>
 		<ul id="mk-nav-search-result" class="ui-autocomplete"></ul>
 	</div>
