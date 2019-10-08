@@ -10,4 +10,12 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	/**
+	 * Add title attribute to Youtube iframes.
+	 */
+	$( 'iframe' ).each(function(){
+		if ( $( this ).attr( 'src' ).includes( 'youtube.com' ) ) {
+			$( this ).attr( 'title', 'Youtube video' );
+		}
+	});
 });
