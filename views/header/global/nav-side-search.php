@@ -20,7 +20,7 @@ if ($mk_options['header_search_location'] == 'beside_nav') { ?>
 
 	<div id="mk-nav-search-wrapper" class="mk-box-to-trigger">
 		<form method="get" id="mk-header-navside-searchform" action="<?php echo home_url('/'); ?>">
-			<input type="text" name="s" id="mk-ajax-search-input" autocomplete="off" />
+			<input aria-label="Search:" type="text" name="s" id="mk-ajax-search-input" autocomplete="off" />
 			<?php wp_nonce_field('mk-ajax-search-form', 'security'); ?>
 			<i class="nav-side-search-icon">
 				<button type="submit">
