@@ -1,12 +1,9 @@
 <?php
 /**
+ * Overrides the default logic of mk_head_meta_tags()
  * Enable zoom and scale.
- *
- * Original location: /framework/helpers/wp_head.php
- */
-
-/**
- * Output header meta tags
+ * 
+ * @version 1.0.2
  */
 if ( ! function_exists( 'mk_head_meta_tags' ) ) {
 	function mk_head_meta_tags() {

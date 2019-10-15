@@ -9,6 +9,7 @@ class Jupiter_All {
 
 	public function helpers() {
 		include JUPITER_ALL_PATH . '/framework/helpers/global.php';
+		include JUPITER_ALL_PATH . '/framework/helpers/wp_head.php';
 		include JUPITER_ALL_PATH . '/includes/helpers/template-part-helpers.php';
 	}
 

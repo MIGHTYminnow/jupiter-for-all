@@ -1,10 +1,5 @@
 <?php
 /**
- * Overwrite Jupiter functions (create them before they are created by parent theme).
- */
-include_once 'functions/mk-head-meta-tags.php';
-
-/**
  * Enqueue child theme styles and scripts.
  */
 if ( ! function_exists( 'jc_enqueue_assets' ) ) {
