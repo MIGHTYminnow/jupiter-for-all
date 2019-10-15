@@ -1,4 +1,10 @@
 <?php
+/**
+ * Overrides the default logic of mk_build_main_wrapper()
+ * Replaces <div id="theme-page"> with <main id="theme-page">.
+ * 
+ * @version 1.0.2
+ */
 if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 	/**
 	 * Builds content wrappers for the given content

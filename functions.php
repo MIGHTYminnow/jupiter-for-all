@@ -2,7 +2,6 @@
 /**
  * Overwrite Jupiter functions (create them before they are created by parent theme).
  */
-include_once 'functions/mk-build-main-wrapper.php';
 include_once 'functions/mk-head-meta-tags.php';
 
 /**
