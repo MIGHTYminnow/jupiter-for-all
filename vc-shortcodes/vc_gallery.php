@@ -3,8 +3,9 @@
  * Overrides /include/templates/shortcodes/vc_gallery.php
  * on WPBakery Page Builder (Modified Version).
  * 
- * @version 5.5.5
+ * @version 6.0.5
  */
+ 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -94,7 +95,7 @@ if ( '' === $images ) {
 	$images = '-1,-2,-3';
 }
 
-$pretty_rel_random = ' data-rel="prettyPhoto[rel-' . get_the_ID() . '-' . rand() . ']"';
+$pretty_rel_random = ' data-rel="prettyPhoto[rel-' . get_the_ID() . '-' . wp_rand() . ']"';
 
 if ( 'custom_link' === $onclick ) {
 	$custom_links = vc_value_from_safe( $custom_links );
@@ -124,15 +125,14 @@ foreach ( $images as $i => $image ) {
 				$large_img_src = $img['p_img_large'][0];
 			} else {
 				$large_img_src = $default_src;
-				$thumbnail = '<img src="' . $default_src . '" />';
+				$thumbnail = '<img src="' . esc_url( $default_src ) . '" />';
 			}
 			break;
 
 		case 'external_link':
-			$image = esc_attr( $image );
-			$dimensions = vcExtractDimensions( $external_img_size );
+			$dimensions = vc_extract_dimensions( $external_img_size );
 			$hwstring = $dimensions ? image_hwstring( $dimensions[0], $dimensions[1] ) : '';
-			$thumbnail = '<img ' . $hwstring . ' src="' . $image . '" />';
+			$thumbnail = '<img ' . $hwstring . ' src="' . esc_url( $image ) . '" />';
 			$large_img_src = $image;
 			break;
 	}
@@ -179,4 +179,4 @@ $output .= '<div class="wpb_gallery_slides' . $type . '" data-interval="' . $int
 $output .= '</div>';
 $output .= '</div>';
 
-echo $output;
+return $output;

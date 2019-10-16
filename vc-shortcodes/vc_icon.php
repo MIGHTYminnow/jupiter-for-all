@@ -3,7 +3,7 @@
  * Overrides /include/templates/shortcodes/vc_icon.php
  * on WPBakery Page Builder (Modified Version).
  * 
- * @version 5.5.5
+ * @version 6.0.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -71,27 +71,24 @@ $rel = '';
 if ( ! empty( $url['rel'] ) ) {
 	$rel = ' rel="' . esc_attr( $url['rel'] ) . '"';
 }
-$wrapper_attributes = array();
-if ( ! empty( $el_id ) ) {
-	$wrapper_attributes[] = 'id="' . esc_attr( $el_id ) . '"';
+$output = '';
+$output .= '<div' . ( ! empty( $el_id ) ? ' id="' . esc_attr( $el_id ) . '"' : '' ) . ' class="vc_icon_element vc_icon_element-outer' . ( strlen( $css_class ) > 0 ? ' ' . esc_attr( trim( $css_class ) ) : '' ) . ' vc_icon_element-align-' . esc_attr( $align );
+if ( $has_style ) {
+	$output .= ' vc_icon_element-have-style';
 }
-?>
-<div <?php echo implode( ' ', $wrapper_attributes ); ?>
-	class="vc_icon_element vc_icon_element-outer<?php echo strlen( $css_class ) > 0 ? ' ' . trim( esc_attr( $css_class ) ) : ''; ?> vc_icon_element-align-<?php echo esc_attr( $align );
-	if ( $has_style ) {
-		echo ' vc_icon_element-have-style';
-	} ?>">
-	<div class="vc_icon_element-inner vc_icon_element-color-<?php echo esc_attr( $color );
-	if ( $has_style ) {
-		echo ' vc_icon_element-have-style-inner';
-	} ?> vc_icon_element-size-<?php echo esc_attr( $size ); ?> vc_icon_element-style-<?php echo esc_attr( $background_style ); ?> vc_icon_element-background-color-<?php echo esc_attr( $background_color ); ?>"<?php echo $style ?>>
-		<span class="vc_icon_element-icon <?php echo $iconClass; ?>" <?php echo( 'custom' === $color ? 'style="color:' . esc_attr( $custom_color ) . ' !important"' : '' ); ?>></span><?php
-		if ( strlen( $link ) > 0 && strlen( $url['url'] ) > 0 ) {
-			echo '<a class="vc_icon_element-link" href="' . esc_attr( $url['url'] ) . '" ' . $rel . ' title="' . esc_attr( $url['title'] ) . '" target="' . ( strlen( $url['target'] ) > 0 ? esc_attr( $url['target'] ) : '_self' ) . '">';
-			echo '<span class="screen-reader-text">';
-			echo ucfirst( str_replace( 'fa fa-', '', $iconClass ) );
-			echo '</span>';
-			echo '</a>';
-		}
-		?></div>
-</div>
+$output .= '"><div class="vc_icon_element-inner vc_icon_element-color-' . esc_attr( $color );
+if ( $has_style ) {
+	$output .= ' vc_icon_element-have-style-inner';
+}
+$output .= ' vc_icon_element-size-' . esc_attr( $size ) . ' vc_icon_element-style-' . esc_attr( $background_style ) . ' vc_icon_element-background-color-' . esc_attr( $background_color ) . '" ' . $style . '><span class="vc_icon_element-icon ' . esc_attr( $iconClass ) . '" ' . ( 'custom' === $color ? 'style="color:' . esc_attr( $custom_color ) . ' !important"' : '' ) . '></span>';
+
+if ( strlen( $link ) > 0 && strlen( $url['url'] ) > 0 ) {
+	$output .= '<a class="vc_icon_element-link" href="' . esc_url( $url['url'] ) . '" ' . $rel . ' title="' . esc_attr( $url['title'] ) . '" target="' . ( strlen( $url['target'] ) > 0 ? esc_attr( $url['target'] ) : '_self' ) . '">
+			<span class="screen-reader-text">
+			' . ucfirst( str_replace( 'fa fa-', '', $iconClass ) ) . '
+			</span>
+		</a>';
+}
+$output .= '</div></div>';
+
+return $output;
