@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/footer/quick-contact.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
 
 /**
  * template part for footer quick contact. views/footer

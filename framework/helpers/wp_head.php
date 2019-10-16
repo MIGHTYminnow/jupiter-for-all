@@ -1,9 +1,13 @@
 <?php
 /**
- * Overrides the default logic of mk_head_meta_tags()
- * Enable zoom and scale.
+ * Overrides mk_head_meta_tags()
+ * from /framework/helpers/wp_head.php on Jupiter Donut.
  * 
  * @version 1.0.2
+ */
+
+/**
+ * Enable zoom and scale
  */
 if ( ! function_exists( 'mk_head_meta_tags' ) ) {
 	function mk_head_meta_tags() {

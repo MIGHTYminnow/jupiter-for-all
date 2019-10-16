@@ -1,4 +1,10 @@
 <?php
+/**
+ * Overrides /wpbakery/shortcodes/mk_page_section/components/video-backgrounds.php
+ * on Jupiter Donut.
+ * 
+ * @version 1.0.2
+ */
 
 $has_parallax   = ('true' == $view_params['parallax']);
 $layer_config[] = ( $has_parallax ) ? 'data-mk-component="Parallax"' : '';

@@ -1,10 +1,11 @@
 <?php
 /**
- * Overrides the default logic of mk_get_template_part()
- * to allow Jupiter for All to use custom views/components.
+ * Overrides mk_get_template_part()
+ * from /includes/helpers/template-part-helpers.php on Jupiter Donut.
  * 
  * @version 1.0.2
  */
+
 if ( ! function_exists( 'mk_get_template_part' ) ) {
 	function mk_get_template_part( $file, $view_params = array() ) {
 		global $post;

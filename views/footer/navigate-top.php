@@ -1,5 +1,11 @@
 <?php
 /**
+ * Overrides /views/footer/navigate-top.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
+
+/**
  * template part for footer navigate to top module. views/footer
  *
  * @author 		Artbees

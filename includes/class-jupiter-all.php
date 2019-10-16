@@ -17,6 +17,13 @@ class Jupiter_All {
 	private function hooks() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 		add_action( 'mk_theme_after_body_opening', array( $this, 'skip_to_links' ) );
+		$files = scandir( JUPITER_ALL_PATH . '/vc-shortcodes/' );
+		foreach ( $files as $file ) {
+			if ( ! is_dir( $file ) ) {
+				$file = basename( $file, '.php' );
+				add_filter( "vc_shortcode_set_template_{$file}", array( $this, 'vc_shortcode_set_template' ) );
+			}
+		}
 	}
 
 	public function enqueue_assets() {
@@ -26,6 +33,10 @@ class Jupiter_All {
 
 	public function skip_to_links() {
 		mk_get_template_part( 'parts/header/global/skip-to-links' );
+	}
+
+	public function vc_shortcode_set_template( $template ) {
+		return JUPITER_ALL_PATH . '/vc-shortcodes/' . basename( $template );
 	}
 
 }

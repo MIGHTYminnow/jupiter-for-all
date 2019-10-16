@@ -1,4 +1,10 @@
 <?php
+/**
+ * Overrides /include/templates/shortcodes/vc_gallery.php
+ * on WPBakery Page Builder (Modified Version).
+ * 
+ * @version 5.5.5
+ */
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -22,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $css
  * @var $css_animation
  * Shortcode class
- * @var $this WPBakeryShortCode_VC_gallery
+ * @var WPBakeryShortCode_Vc_gallery $this
  */
 $thumbnail = '';
 $title = $source = $type = $onclick = $custom_links = $custom_links_target = $img_size = $external_img_size = $images = $custom_srcs = $el_class = $el_id = $interval = $css = $css_animation = '';
@@ -135,19 +141,19 @@ foreach ( $images as $i => $image ) {
 
 	switch ( $onclick ) {
 		case 'img_link_large':
-			$link_start = '<a href="' . $large_img_src . '" target="' . $custom_links_target . '">';
-			$link_end = '</a>';
+			$link_start = '<button aria-haspopup="dialog" data-href="' . $large_img_src . '">';
+			$link_end = '</button>';
 			break;
 
 		case 'link_image':
-			$link_start = '<a class="prettyphoto" href="' . $large_img_src . '"' . $pretty_rel_random . '>';
-			$link_end = '</a>';
+			$link_start = '<button aria-haspopup="dialog" class="prettyphoto" data-href="' . $large_img_src . '"' . $pretty_rel_random . '>';
+			$link_end = '</button>';
 			break;
 
 		case 'custom_link':
 			if ( ! empty( $custom_links[ $i ] ) ) {
-				$link_start = '<a href="' . $custom_links[ $i ] . '"' . ( ! empty( $custom_links_target ) ? ' target="' . $custom_links_target . '"' : '' ) . '>';
-				$link_end = '</a>';
+				$link_start = '<button aria-haspopup="dialog" data-href="' . $custom_links[ $i ] . '">';
+				$link_end = '</button>';
 			}
 			break;
 	}

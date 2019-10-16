@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/header/master/logo.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
 
 /**
  * Template part for header logo. views/header/master

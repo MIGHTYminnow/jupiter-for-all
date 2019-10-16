@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/header/global/nav-side-search.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
 
 /**
  * template part for Search form located beside main navigation. views/header/global

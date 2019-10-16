@@ -1,4 +1,10 @@
-<?php 
+<?php
+/**
+ * Overrides /views/header/global/main-menu-burger-icon.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
+
 global $mk_options;
 
 if ($view_params['header_style'] == 3) return false;

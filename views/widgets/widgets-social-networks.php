@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Overrides /views/widgets/widgets-social-networks.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
 class Artbees_Widget_Social extends WP_Widget {
 
 	var $sites = array(

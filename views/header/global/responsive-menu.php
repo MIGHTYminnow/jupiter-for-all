@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/header/global/responsive-menu.php on Jupiter.
+ * 
+ * @version 6.4.1
+ */
 
 /**
  * template part for responsive search. views/header/global

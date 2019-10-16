@@ -1,9 +1,13 @@
 <?php
 /**
- * Overrides the default logic of mk_build_main_wrapper()
- * Replaces <div id="theme-page"> with <main id="theme-page">.
+ * Overrides mk_build_main_wrapper()
+ * from /framework/helpers/global.php on Jupiter Donut.
  * 
  * @version 1.0.2
+ */
+
+/**
+ * Replaces <div id="theme-page"> with <main id="theme-page">.
  */
 if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 	/**
