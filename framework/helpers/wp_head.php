@@ -7,7 +7,7 @@
  */
 
 /**
- * Enable zoom and scale
+ * Enables zoom and scale
  */
 if ( ! function_exists( 'mk_head_meta_tags' ) ) {
 	function mk_head_meta_tags() {

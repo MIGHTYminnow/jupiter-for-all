@@ -6,6 +6,9 @@
  * @version 1.0.2
  */
 
+/**
+ * Allows to override Jupiter template parts from Jupiter for All.
+ */
 if ( ! function_exists( 'mk_get_template_part' ) ) {
 	function mk_get_template_part( $file, $view_params = array() ) {
 		global $post;
