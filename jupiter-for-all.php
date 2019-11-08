@@ -15,7 +15,7 @@ if ( ! class_exists( 'Jupiter_All', false ) ) {
 	global $jupiter_all;
 	$jupiter_all = new Jupiter_All();
 
-	require_once( '/libraries/BFIGitHubPluginUpdater/BFIGitHubPluginUpdater.php' );
+	require_once( JUPITER_ALL_PATH . '/libraries/BFIGitHubPluginUpdater/BFIGitHubPluginUpdater.php' );
 	if ( is_admin() ) {
 		new BFIGitHubPluginUpdater( __FILE__, 'MIGHTYminnow', "jupiter-for-all" );
 	}
