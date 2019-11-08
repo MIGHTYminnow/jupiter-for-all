@@ -1,4 +1,8 @@
 <?php
+if ( class_exists( 'BFIGitHubPluginUpdater' ) ) {
+	return;
+}
+
 class BFIGitHubPluginUpdater {
  
     private $slug; // plugin slug

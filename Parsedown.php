@@ -11,6 +11,11 @@
 # with this source code.
 #
 #
+
+if ( class_exists( 'Parsedown' ) ) {
+	return;
+}
+
 class Parsedown
 {
     # ~
