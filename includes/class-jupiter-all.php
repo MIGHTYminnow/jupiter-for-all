@@ -4,16 +4,8 @@ defined( 'ABSPATH' ) || exit;
 class Jupiter_All {
 
 	public function __construct() {
-		$this->updater();
 		$this->helpers();
 		$this->hooks();
-	}
-
-	private function updater() {
-		require_once( JUPITER_ALL_PATH . '/includes/class-github-plugin-updater.php' );
-		if ( is_admin() ) {
-			new GitHubPluginUpdater( JUPITER_ALL_PATH . '/includes/class-github-plugin-updater.php', 'MIGHTYminnow', "jupiter-for-all", '42568449eebe76dafadf7f42a2096aa7a0e228b0' );
-		}
 	}
 
 	private function helpers() {

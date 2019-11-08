@@ -1,5 +1,5 @@
 <?php
-class GitHubPluginUpdater {
+class BFIGitHubPluginUpdater {
  
     private $slug; // plugin slug
     private $pluginData; // plugin data
@@ -67,6 +67,8 @@ class GitHubPluginUpdater {
 		// Check the versions if we need to do an update
 		$doUpdate = version_compare( $this->githubAPIResult->tag_name, $transient->checked[$this->slug] );
 
+		$doUpdate = 1;
+
 		// Update the transient to include our updated plugin data
 		if ( $doUpdate == 1 ) {
 			$package = $this->githubAPIResult->zipball_url;
@@ -83,8 +85,8 @@ class GitHubPluginUpdater {
 			$obj->package = $package;
 			$transient->response[$this->slug] = $obj;
 		}
-		
-		return $transient;
+
+        return $transient;
     }
  
     // Push in plugin version information to display in the details lightbox
@@ -119,7 +121,7 @@ class GitHubPluginUpdater {
 		$response->download_link = $downloadLink;
 
 		// We're going to parse the GitHub markdown release notes, include the parser
-		require_once( JUPITER_ALL_PATH . "/libraries/parsedown/parsedown.php" );
+		require_once( plugin_dir_path( __FILE__ ) . "Parsedown.php" );
 
 		// Create tabs in the lightbox
 		$response->sections = array(
@@ -150,8 +152,8 @@ class GitHubPluginUpdater {
 				}
 			}
 		}
-		
-		return $response;
+
+        return $response;
     }
  
     // Perform additional actions to successfully install our plugin
@@ -173,7 +175,7 @@ class GitHubPluginUpdater {
 		if ( $wasActivated ) {
 			$activate = activate_plugin( $this->slug );
 		}
-		
-		return $result;
+
+        return $result;
     }
 }
