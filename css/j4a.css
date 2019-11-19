@@ -95,3 +95,10 @@ input.button:focus {
 	background: none;
 	border: none;
 }
+
+/**
+ * Remove text underline from buttons.
+ */
+#mk-theme-container .mk-button{
+	text-decoration: none;
+}
