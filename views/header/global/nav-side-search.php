@@ -42,7 +42,10 @@ if ($mk_options['header_search_location'] == 'beside_nav') { ?>
 <?php } elseif ($mk_options['header_search_location'] == 'fullscreen_search') { ?>
 
 	<div class="main-nav-side-search">
-		<a class="mk-search-trigger <?php echo $icon_height; ?> mk-fullscreen-trigger" href="#"><i class="mk-svg-icon-wrapper"><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search', 16); ?></i></a>
+		<a class="mk-search-trigger <?php echo $icon_height; ?> mk-fullscreen-trigger" href="#">
+			<i class="mk-svg-icon-wrapper"><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search', 16); ?></i>
+			<span class="screen-reader-text"><?php _e( 'Open Search', 'mk_framework' ); ?></span>
+		</a>
 	</div>
 
 <?php
