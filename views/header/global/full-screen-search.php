@@ -20,7 +20,7 @@
 	<div class="mk-fullscreen-search-wrapper">
 		<p><?php _e('Start typing and press Enter to search', 'mk_framework'); ?></p>
 		<form method="get" id="mk-fullscreen-searchform" action="<?php echo home_url('/'); ?>">
-			<input type="text" value="" name="s" id="mk-fullscreen-search-input" />
+			<input type="text" value="" name="s" id="mk-fullscreen-search-input" aria-label="<?php _e( 'Search', 'mk_framework' ); ?>" />
 			<i class="fullscreen-search-icon"><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search', 25); ?></i>
 		</form>
 	</div>
