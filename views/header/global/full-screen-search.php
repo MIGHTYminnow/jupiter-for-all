@@ -16,7 +16,10 @@
 ?>
 
 <div class="mk-fullscreen-search-overlay">
-	<a href="#" class="mk-fullscreen-close"><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-moon-close-2'); ?></a>
+	<a href="#" class="mk-fullscreen-close">
+		<?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-moon-close-2'); ?>
+		<span class="screen-reader-text"><?php _e( 'Close Search', 'mk_framework' ); ?></span>
+	</a>
 	<div class="mk-fullscreen-search-wrapper">
 		<p><?php _e('Start typing and press Enter to search', 'mk_framework'); ?></p>
 		<form method="get" id="mk-fullscreen-searchform" action="<?php echo home_url('/'); ?>">
