@@ -21,4 +21,12 @@ jQuery(document).ready(function($){
 			$( this ).attr( 'title', 'Google Maps' );
 		}
 	});
+
+	/**
+	 * Move bottom corner buttons inside footer.
+	 */
+	var $btns = $( '.bottom-corner-btns' );
+	if ( $btns.size() > 0 ) {
+		$( '#mk-footer' ).append( $btns );
+	}
 });
