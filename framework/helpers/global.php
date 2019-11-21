@@ -95,7 +95,7 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 			</div>
 			<div class="mk-main-wrapper-holder">
 				<div <?php echo $wrapper_id; ?> class="theme-page-wrapper <?php echo esc_attr( $wrapper_class ) . ' ' . esc_attr( $layout ) . '-layout ' . esc_attr( $padding ); ?>">
-					<div class="theme-content <?php echo esc_attr( $padding ); ?>" itemprop="<?php echo esc_attr( $itemprop ); ?>">
+					<main class="theme-content <?php echo esc_attr( $padding ); ?>" itemprop="<?php echo esc_attr( $itemprop ); ?>">
 							<?php echo $content; ?>
 							<div class="clearboth"></div>
 						<?php
@@ -105,7 +105,7 @@ if ( ! function_exists( 'mk_build_main_wrapper' ) ) {
 							}
 						}
 						?>
-					</div>
+					</main>
 					<?php
 					if ( 'left' === $layout || 'right' === $layout ) {
 						get_sidebar(); }
