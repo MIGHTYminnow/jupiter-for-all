@@ -6,6 +6,8 @@
  * @author 		Artbees
  * @package 	jupiter/views
  * @version     5.0.0
+ * 
+ * Jupiter Version: 6.4.1
  */
 
 

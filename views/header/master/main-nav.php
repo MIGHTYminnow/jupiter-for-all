@@ -7,6 +7,8 @@
  * @package jupiter/views
  * @since   5.0.0
  * @since   5.9.1 Fixed empty menu locations undefined index in centered menu.
+ * 
+ * Jupiter Version: 6.4.1
  */
 
 global $mk_options;
