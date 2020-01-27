@@ -20,3 +20,4 @@ if ( ! class_exists( 'Jupiter_All', false ) ) {
 		new BFIGitHubPluginUpdater( __FILE__, 'MIGHTYminnow', "jupiter-for-all" );
 	}
 }
+
