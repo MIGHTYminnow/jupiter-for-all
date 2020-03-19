@@ -40,12 +40,12 @@ $hide_header_nav = isset($mk_options['hide_header_nav']) ? $mk_options['hide_hea
 	<?php if ($mk_options['header_search_location'] != 'disable') { ?>
 		<form class="responsive-searchform" method="get" action="<?php echo home_url('/'); ?>">
 		    <input aria-label="Search:" type="text" class="text-input" value="" name="s" id="s" placeholder="<?php _e('Search..', 'mk_framework'); ?>" />
-		    <i>
+		    <span>
 				<button type="submit">
 					<?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search'); ?>
 					<span class="screen-reader-text"><?php _e( 'Search', 'mk_framework-child4a' ); ?></span>
 				</button>
-			</i>
+			</span>
 		</form>
 	<?php } ?>	
 

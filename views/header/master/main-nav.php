@@ -29,6 +29,11 @@ $menu_html = wp_nav_menu(array(
 
 $menu_html = str_replace( '<nav', '<nav aria-label="Main Navigation"', $menu_html );
 
+$menu_html = str_replace( 
+    array( '<i>', '<i ', '</i>' ),
+    array( '<span>', '<span ', '</span>' ),
+    $menu_html
+);
 
 // Send logo to the middle of logo
 if(isset($view_params['logo_middle']) && $view_params['logo_middle'] == 'true') {
