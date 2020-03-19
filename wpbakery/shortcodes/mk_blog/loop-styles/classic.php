@@ -34,7 +34,7 @@ $post_type = !empty($post_type) ? $post_type : 'image';
 $orientation_class = ($post_type != 'instagram' && $post_type != 'twitter') ? $orientation_class : '';
 ?>
 
-<article aria-labeledby="#title-<?php the_ID(); ?>" id="<?php the_ID(); ?>" class="mk-blog-classic-item mk-isotop-item <?php echo $post_type; ?>-post-type <?php echo $orientation_class; ?>">
+<article aria-labelledby="title-<?php the_ID(); ?>" id="<?php the_ID(); ?>" class="mk-blog-classic-item mk-isotop-item <?php echo $post_type; ?>-post-type <?php echo $orientation_class; ?>">
 
     <?php
         $media_atts = array(
