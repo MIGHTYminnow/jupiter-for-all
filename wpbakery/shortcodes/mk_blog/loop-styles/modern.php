@@ -50,9 +50,7 @@ $post_type = !empty($post_type) ? $post_type : 'image';
             echo mk_get_shortcode_view('mk_blog', 'components/excerpt', true, ['excerpt_length' => $view_params['excerpt_length'], 'full_content' => $view_params['full_content']]);
         ?>
 
-        <?php
-            echo do_shortcode( '[mk_button dimension="flat" corner_style="rounded" bg_color="'.$skin_color.'" btn_hover_bg="'.hexDarker($skin_color, 30).'" text_color="light" btn_hover_txt_color="#ffffff" size="medium" target="_self" align="none" url="' . esc_url( get_permalink() ) . '"]'.__('READ MORE', 'jupiter-donut').'[/mk_button]' );
-        ?>
+
 
         <div class="clearboth"></div>
     </div>
