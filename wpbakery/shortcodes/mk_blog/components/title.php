@@ -1,1 +1,1 @@
-<h3 id="title-<?php the_ID(); ?>" class="the-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h3>
+<h2 id="title-<?php the_ID(); ?>" class="the-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h2>
