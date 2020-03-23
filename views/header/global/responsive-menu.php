@@ -35,7 +35,7 @@ $hide_header_nav = isset($mk_options['hide_header_nav']) ? $mk_options['hide_hea
 		    'walker' => new mk_main_menu_responsive_walker,
 		));
 
-		$html_menu = str_replace( '<nav', '<nav aria-label="' . __( 'Main Navigation', 'j4a' ) . '"', $html_menu );
+		$html_menu = str_replace( '<nav', '<nav aria-label="' . __( 'Mobile Navigation', 'j4a' ) . '"', $html_menu );
 
 		echo $html_menu;
 	}
