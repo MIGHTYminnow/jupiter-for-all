@@ -26,7 +26,7 @@ switch ( $view_params['post_type'] ) {
 				array(
 					'echo' => false,
 				)
-			) . '" href="' . esc_url( $image_permalink ) . '">&nbsp;</a>';
+			) . '" href="' . esc_url( $image_permalink ) . '"><span class="screen-reader-text">View post</span></a>';
 			echo '<img class="blog-image" alt="' . the_title_attribute(
 				array(
 					'echo' => false,
