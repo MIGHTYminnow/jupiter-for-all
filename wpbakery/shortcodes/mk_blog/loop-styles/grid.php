@@ -71,12 +71,5 @@ $post_type = !empty($post_type) ? $post_type : 'image';
             ?>
         </div>
 
-
-        <div class="blog-grid-footer">
-            <?php
-                echo mk_get_shortcode_view('mk_blog', 'components/read-more', true);
-            ?>
-        </div>
-
     </div>
 </article>
