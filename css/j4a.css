@@ -65,7 +65,7 @@
 a.button:focus, /** ... And also overwrite Jupiter styles */
 button.button:focus,
 input.button:focus {
-	outline: 6px auto #193ACC !important;
+	outline: 4px solid #193ACC !important;
 }
 
 /**
