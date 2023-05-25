@@ -102,3 +102,10 @@ input.button:focus {
 #mk-theme-container .mk-button{
 	text-decoration: none;
 }
+
+/**
+ * Reset the border-box box-sizing to .theme-content after change from <div> to <nav>
+ */
+.theme-content{
+	box-sizing: border-box;
+}
