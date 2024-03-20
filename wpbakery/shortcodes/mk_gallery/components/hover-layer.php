@@ -12,7 +12,7 @@ if($view_params['hover_scenarios'] == 'none') {
     if (isset($link) && $link != '') { ?>
         <a href="<?php echo $link; ?>" class="full-cover-link">&nbsp;</a>
     <?php } else { ?>
-        <a href="<?php echo wp_get_attachment_image_src($post->ID, 'full', true)[0]; ?>" alt="<?php echo $alt; ?>" title="<?php the_title_attribute(); ?>" data-fancybox="gallery-<?php echo $view_params['id']; ?>" data-caption="<?php echo $alt; ?>" class="mk-lightbox full-cover-link">&nbsp;</a>
+        <a href="<?php echo wp_get_attachment_image_src($post->ID, 'full', true)[0]; ?>" alt="<?php echo $alt; ?>" title="<?php the_title_attribute(); ?>" data-caption="<?php the_title_attribute(); ?>" data-fancybox="gallery-<?php echo $view_params['id']; ?>" class="mk-lightbox full-cover-link">&nbsp;</a>
     <?php }
 }
 ?>
@@ -50,9 +50,8 @@ if($view_params['hover_scenarios'] == 'none') {
 
     <?php } else { ?>
 
-        <a href="<?php echo wp_get_attachment_image_src($post->ID, 'full', true)[0]; ?>" alt="<?php echo $alt; ?>" title="<?php the_title_attribute(); ?>" data-fancybox="gallery-<?php echo $view_params['id']; ?>" data-caption="<?php echo $alt; ?>" class="mk-lightbox <?php echo $lightbox_push_top; ?> mk-image-lightbox">
+        <a href="<?php echo wp_get_attachment_image_src($post->ID, 'full', true)[0]; ?>" alt="<?php echo $alt; ?>" title="<?php the_title_attribute(); ?>" data-caption="<?php the_title_attribute(); ?>" data-fancybox="gallery-<?php echo $view_params['id']; ?>" class="mk-lightbox <?php echo $lightbox_push_top; ?> mk-image-lightbox">
             <?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-jupiter-icon-plus-circle'); ?>
-            <span class="screen-reader-text"><?php _e( 'View full image', 'jupiter-for-all' ); ?></span>
         </a>
 
     <?php }

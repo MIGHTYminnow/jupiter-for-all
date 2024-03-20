@@ -78,9 +78,10 @@ if ( 'grid' == $view_params['style'] ) {
 
 }
 
-$featured_image_src = Mk_Image_Resize::resize_by_id_adaptive( get_post_thumbnail_id(), $view_params['image_size'], $width, $height, $crop = true, $dummy = true );
+$thumbnail_id  = ! empty( get_post_thumbnail_id() ) ? get_post_thumbnail_id() : get_the_ID();
 
-$image_size_atts = Mk_Image_Resize::get_image_dimension_attr( get_post_thumbnail_id(), $view_params['image_size'], $width, $height );
+$featured_image_src = Mk_Image_Resize::resize_by_id_adaptive( $thumbnail_id, $view_params['image_size'], $width, $height, $crop = true, $dummy = true );
+$image_size_atts    = Mk_Image_Resize::get_image_dimension_attr( $thumbnail_id, $view_params['image_size'], $width, $height );
 
 ?>
 
