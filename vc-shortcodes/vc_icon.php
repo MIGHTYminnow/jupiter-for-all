@@ -1,11 +1,4 @@
 <?php
-/**
- * Overrides /include/templates/shortcodes/vc_icon.php
- * on WPBakery Page Builder (Modified Version).
- * 
- * @version 7.6
- */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 }
@@ -84,11 +77,7 @@ if ( $has_style ) {
 $output .= ' vc_icon_element-size-' . esc_attr( $size ) . ' vc_icon_element-style-' . esc_attr( $background_style ) . ' vc_icon_element-background-color-' . esc_attr( $background_color ) . '" ' . $style . '><span class="vc_icon_element-icon ' . esc_attr( $iconClass ) . '" ' . ( 'custom' === $color ? 'style="color:' . esc_attr( $custom_color ) . ' !important"' : '' ) . '></span>';
 
 if ( strlen( $link ) > 0 && strlen( $url['url'] ) > 0 ) {
-	$output .= '<a class="vc_icon_element-link" href="' . esc_url( $url['url'] ) . '" ' . $rel . ' title="' . esc_attr( $url['title'] ) . '" target="' . ( strlen( $url['target'] ) > 0 ? esc_attr( $url['target'] ) : '_self' ) . '">
-			<span class="screen-reader-text">
-			' . $url['title'] . '
-			</span>
-	</a>';
+	$output .= '<a class="vc_icon_element-link" href="' . esc_url( $url['url'] ) . '" ' . $rel . ' title="' . esc_attr( $url['title'] ) . '" target="' . ( strlen( $url['target'] ) > 0 ? esc_attr( $url['target'] ) : '_self' ) . '"></a>';
 }
 $output .= '</div></div>';
 
