@@ -109,3 +109,16 @@ input.button:focus {
 .theme-content{
 	box-sizing: border-box;
 }
+
+/**
+ * Bootom Right Sticky Buttons
+ *
+ * Prevent the main content to overlay them.
+ */
+#mk-boxed-layout #mk-footer{
+	position: relative;
+}
+#mk-boxed-layout #mk-footer,
+#mk-boxed-layout .bottom-corner-btns{
+	z-index: 99999;
+}

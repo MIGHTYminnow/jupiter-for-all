@@ -3,6 +3,8 @@ defined( 'ABSPATH' ) || exit;
 
 class Jupiter_All {
 
+	const VERSION = '1.1.12-dev-3';
+
 	public function __construct() {
 		$this->helpers();
 		$this->hooks();
@@ -27,8 +29,8 @@ class Jupiter_All {
 	}
 
 	public function enqueue_assets() {
-		wp_enqueue_style( 'j4a', JUPITER_ALL_URL . 'css/j4a.css', array(), null );
-		wp_enqueue_script( 'j4a', JUPITER_ALL_URL . 'js/j4a.js', array( 'jquery' ), null, true );
+		wp_enqueue_style( 'j4a', JUPITER_ALL_URL . 'css/j4a.css', array(), $this::VERSION );
+		wp_enqueue_script( 'j4a', JUPITER_ALL_URL . 'js/j4a.js', array( 'jquery' ), $this::VERSION, true );
 	}
 
 	public function skip_to_links() {
