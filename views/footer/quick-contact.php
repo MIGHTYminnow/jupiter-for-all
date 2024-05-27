@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/footer/quick-contact.php on Jupiter.
+ * 
+ * @version 6.12.0
+ */
 
 /**
  * template part for footer quick contact. views/footer
@@ -32,9 +37,9 @@ Mk_Send_Mail::update_contact_form_email( 2342, 15, $mk_options['quick_contact_em
 			<div class="mk-quick-contact-title"><?php echo esc_html( $mk_options['quick_contact_title'] ); ?></div>
 			<p><?php echo esc_html( $mk_options['quick_contact_desc'] ); ?></p>
 			<form class="mk-contact-form" method="post" novalidate="novalidate">
-				<input type="text" placeholder="<?php esc_attr_e( 'Name*', 'mk_framework' ); ?>" required="required" id="name" name="name" class="text-input" value="" tabindex="<?php echo esc_attr( $id++ ); ?>" />
-				<input type="email" data-type="email" required="required" placeholder="<?php esc_attr_e( 'Email*', 'mk_framework' ); ?>" id="email" name="email" class="text-input" value="" tabindex="<?php echo esc_attr( $id++ ); ?>"  />
-				<textarea placeholder="<?php esc_attr_e( 'Message*', 'mk_framework' ); ?>" required="required" id="content" name="content" class="textarea" tabindex="<?php echo esc_attr( $id++ ); ?>"></textarea>
+				<input aria-label="<?php esc_attr_e( 'Name*:', 'mk_framework' ); ?>" type="text" placeholder="<?php esc_attr_e( 'Name*', 'mk_framework' ); ?>" required="required" id="name" name="name" class="text-input" value="" tabindex="<?php echo esc_attr( $id++ ); ?>" />
+				<input aria-label="<?php esc_attr_e( 'Email*:', 'mk_framework' ); ?>" type="email" data-type="email" required="required" placeholder="<?php esc_attr_e( 'Email*', 'mk_framework' ); ?>" id="email" name="email" class="text-input" value="" tabindex="<?php echo esc_attr( $id++ ); ?>"  />
+				<textarea aria-label="<?php esc_attr_e( 'Message*:', 'mk_framework' ); ?>" placeholder="<?php esc_attr_e( 'Message*', 'mk_framework' ); ?>" required="required" id="content" name="content" class="textarea" tabindex="<?php echo esc_attr( $id++ ); ?>"></textarea>
 				<?php
 				if ( 'true' == $captcha && mk_is_callable( 'Mk_Theme_Captcha' ) && mk_is_callable( 'Mk_Artbees_Captcha' ) ) :
 				?>
