@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) || exit;
 
 class Jupiter_All {
 
-	const VERSION = '1.1.12-dev-3';
+	const VERSION = '1.2.0';
 
 	public function __construct() {
 		$this->helpers();

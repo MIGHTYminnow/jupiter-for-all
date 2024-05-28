@@ -3,7 +3,7 @@
  * Plugin Name: Jupiter for All
  * Plugin URI: https://github.com/MIGHTYminnow/jupiter-child-for-all
  * Description: Makes your Jupiter child theme accessible.
- * Version: 1.1.11
+ * Version: 1.2.0
  * Author: MIGHTYminnow
  * Author URI: https://mightyminnow.com
  */
