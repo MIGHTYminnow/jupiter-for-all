@@ -1,4 +1,9 @@
 <?php
+/**
+ * Overrides /views/header/global/responsive-menu.php on Jupiter.
+ * 
+ * @version 6.12.0
+ */
 
 /**
  * template part for responsive search. views/header/global
@@ -21,7 +26,7 @@ $hide_header_nav = isset($mk_options['hide_header_nav']) ? $mk_options['hide_hea
 <div class="mk-responsive-wrap">
 
 	<?php if($hide_header_nav != 'false') { 
-		echo wp_nav_menu(array(
+		$html_menu = wp_nav_menu(array(
 		    'theme_location' => $menu_location,
 		    'container' => 'nav',
 		    'menu_class' => 'mk-responsive-nav',
@@ -29,13 +34,22 @@ $hide_header_nav = isset($mk_options['hide_header_nav']) ? $mk_options['hide_hea
 		    'fallback_cb' => 'mk_link_to_menu_editor',
 		    'walker' => new mk_main_menu_responsive_walker,
 		));
+
+		$html_menu = str_replace( '<nav', '<nav aria-label="' . __( 'Mobile Navigation', 'j4a' ) . '"', $html_menu );
+
+		echo $html_menu;
 	}
 	?>
 
 	<?php if ($mk_options['header_search_location'] != 'disable') { ?>
 		<form class="responsive-searchform" method="get" action="<?php echo home_url('/'); ?>">
-		    <input type="text" class="text-input" value="" name="s" id="s" placeholder="<?php _e('Search..', 'mk_framework'); ?>" />
-		    <i><input value="" type="submit" /><?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search'); ?></i>
+		    <input aria-label="Search:" type="text" class="text-input" value="" name="s" id="s" placeholder="<?php _e('Search..', 'mk_framework'); ?>" />
+		    <span>
+				<button type="submit">
+					<?php Mk_SVG_Icons::get_svg_icon_by_class_name(true, 'mk-icon-search'); ?>
+					<span class="screen-reader-text"><?php _e( 'Search', 'mk_framework-child4a' ); ?></span>
+				</button>
+			</span>
 		</form>
 	<?php } ?>	
 
