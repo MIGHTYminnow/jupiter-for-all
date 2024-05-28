@@ -89,11 +89,23 @@ input.button:focus {
 }
 
 /**
- * Responsive Menu Search Button
+ * Responsive Menu Search
  */
+.responsive-searchform input.text-input{
+	margin: 0;
+}
 .responsive-searchform button{
+	position: absolute;
+	top: 50%;
+	right: 6px;
+	padding: 4px 8px;
 	background: none;
 	border: none;
+	transform: translate( 0, -50% );
+}
+.responsive-searchform button svg{
+	width: 20px;
+	fill: #0000004d;
 }
 
 /**
