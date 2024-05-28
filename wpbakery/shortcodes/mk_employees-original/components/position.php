@@ -1,0 +1,1 @@
+<span class="team-member-position jupiter-donut-font-12 jupiter-donut-text-transform-up jupiter-donut-display-block jupiter-donut-color-777 jupiter-donut-letter-spacing-1"><?php echo get_post_meta(get_the_ID() , '_position', true); ?></span>
