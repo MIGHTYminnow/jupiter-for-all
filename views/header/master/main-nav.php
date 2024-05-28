@@ -7,6 +7,8 @@
  * @package jupiter/views
  * @since   5.0.0
  * @since   5.9.1 Fixed empty menu locations undefined index in centered menu.
+ * 
+ * Jupiter Version: 6.12.0
  */
 
 global $mk_options;
@@ -25,6 +27,13 @@ $menu_html = wp_nav_menu(array(
     'walker' => new mk_main_menu,
 ));
 
+$menu_html = str_replace( '<nav', '<nav aria-label="Main Navigation"', $menu_html );
+
+$menu_html = str_replace( 
+    array( '<i>', '<i ', '</i>' ),
+    array( '<span>', '<span ', '</span>' ),
+    $menu_html
+);
 
 // Send logo to the middle of logo
 if(isset($view_params['logo_middle']) && $view_params['logo_middle'] == 'true') {
