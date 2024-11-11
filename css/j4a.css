@@ -61,10 +61,10 @@
 /**
  * Set Focus Outline Styles
  */
-*:focus, /** ... Apply to all elements */
-a.button:focus, /** ... And also overwrite Jupiter styles */
-button.button:focus,
-input.button:focus {
+*:focus-visible, /** ... Apply to all elements */
+a.button:focus-visible, /** ... And also overwrite Jupiter styles */
+button.button:focus-visible,
+input.button:focus-visible {
 	outline: 4px solid #193ACC !important;
 }
 
